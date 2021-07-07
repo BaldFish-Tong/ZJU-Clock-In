@@ -178,13 +178,10 @@ def main(username, password):
 
 
 if __name__ == "__main__":
-    userlist=[]
-    for i in range(0,2):
-        userlist+=[[sys.argv[2*i+1]],[sys.argv[2*i+2]]]
-    for iuser in userlist:
-        try:
-            main(iuser[0], iuser[1])
-        except Exception:
-            continue
-                  
+    username = sys.argv[1]
+    password = sys.argv[2]
+    try:
+        main(username, password)
+    except Exception:
+        exit(1)
     
