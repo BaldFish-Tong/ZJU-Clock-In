@@ -27,5 +27,5 @@ jobs:
           ACCOUNT1: ${{ secrets.ACCOUNT }}
           PASSWORD1: ${{ secrets.PASSWORD }}
         run: |
-          python3 clock-in.py ${ACCOUNT} ${PASSWORD}
+          # python3 clock-in.py ${ACCOUNT} ${PASSWORD}
           python3 clock-in.py ${ACCOUNT1} ${PASSWORD1}
