@@ -17,9 +17,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Install python3
+        uses: actions/setup-python@master
+      - name: Install packages
         run: |
-          sudo -E apt-get -yqq update
-          sudo -E apt-get -yqq install python3
+          pip3 install requests
       - name: Clock In
         env:
           ACCOUNT: ${{ secrets.ACCOUNT1 }}
